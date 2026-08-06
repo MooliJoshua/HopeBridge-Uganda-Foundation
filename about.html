@@ -1,1 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Learn about HopeBridge Uganda Foundation, our mission, vision, values, approach and commitment to empowering communities across Uganda."
+    >
+
+    <title>About Us | HopeBridge Uganda Foundation</title>
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2f8f35;
+            --primary-dark: #1e6b26;
+            --primary-light: #eaf6eb;
+
+            --navy: #062d4d;
+            --navy-light: #0c426d;
+            --navy-dark: #031e34;
+
+            --orange: #f47721;
+            --gold: #f7c948;
+            --blue: #2374c6;
+
+            --white: #ffffff;
+            --off-white: #f7f9fb;
+            --light-gray: #edf1f4;
+            --gray: #68737d;
+            --dark: #14202b;
+
+            --shadow-small: 0 8px 24px rgba(6, 45, 77, 0.08);
+            --shadow-medium: 0 18px 45px rgba(6, 45, 77, 0.13);
+
+            --radius-small: 10px;
+            --radius-medium: 18px;
+            --radius-large: 28px;
+
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            color: var(--gray);
+            font-size: 1rem;
+            max-width: 700px;
+        }
+
+        .button {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            border-radius: 7px;
+            padding: 12px 23px;
+            border: 2px solid transparent;
+            font-weight: 800;
+            font-size: 0.83rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .button-primary {
+            color: var(--white);
+            background: var(--primary);
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-outline-light {
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.85);
+            background: transparent;
+        }
+
+        .button-outline-light:hover {
+            color: var(--navy);
+            background: var(--white);
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background:
+                linear-gradient(135deg, var(--blue) 50%, transparent 50%),
+                linear-gradient(45deg, var(--primary) 50%, var(--gold) 50%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(6, 45, 77, 0.16);
+        }
+
+        .brand-logo::before {
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 24px;
+            left: 15px;
+            top: 9px;
+            background: var(--white);
+            border-radius: 70% 0 70% 0;
+            transform: rotate(45deg);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            color: var(--navy);
+            font-size: 1.13rem;
+            line-height: 1;
+        }
+
+        .brand-text span {
+            display: block;
+            color: var(--gray);
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: #202a33;
+            transition: var(--transition);
+        }
+
+        .navigation a:not(.nav-donate)::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            color: var(--primary);
+        }
+
+        .navigation a:hover::after,
+        .navigation a.active::after {
+            width: 100%;
+        }
+
+        .nav-donate {
+            color: var(--white) !important;
+            background: var(--primary);
+            padding: 11px 18px;
+            border-radius: 6px;
+        }
+
+        .nav-donate:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-button {
+            border: 0;
+            background: transparent;
+            color: var(--navy);
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: var(--transition);
+        }
+
+        .icon-button:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        /* PAGE HERO */
+
+        .page-hero {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4, 27, 45, 0.94) 0%,
+                    rgba(4, 27, 45, 0.77) 45%,
+                    rgba(4, 27, 45, 0.25) 75%
+                ),
+                url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1900&q=85")
+                center / cover no-repeat;
+        }
+
+        .page-hero-content {
+            width: min(700px, 100%);
+            padding: 90px 0;
+        }
+
+        .page-hero-tag {
+            color: #7bdd81;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        .page-hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            line-height: 1.08;
+            margin: 18px 0;
+        }
+
+        .page-hero p {
+            max-width: 620px;
+            font-size: 1.08rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 26px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .breadcrumbs a:hover {
+            color: #8be391;
+        }
+
+        /* WHO WE ARE */
+
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 560px;
+            object-fit: cover;
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about-image-badge {
+            position: absolute;
+            right: -24px;
+            bottom: 35px;
+            width: 180px;
+            padding: 25px 20px;
+            border-radius: var(--radius-medium);
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about-image-badge strong {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .about-image-badge span {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        .about-checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 22px;
+            margin: 28px 0 32px;
+        }
+
+        .about-checks li {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .about-checks svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* MISSION AND VISION */
+
+        .mission-section {
+            background: var(--off-white);
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .mission-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 320px;
+            padding: 42px;
+            border-radius: var(--radius-large);
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .mission-card:first-child {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(30, 107, 38, 0.96),
+                    rgba(47, 143, 53, 0.86)
+                );
+        }
+
+        .mission-card:last-child {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(3, 30, 52, 0.97),
+                    rgba(12, 66, 109, 0.9)
+                );
+        }
+
+        .mission-icon {
+            width: 64px;
+            height: 64px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.14);
+            margin-bottom: 28px;
+        }
+
+        .mission-icon svg {
+            width: 31px;
+            height: 31px;
+        }
+
+        .mission-card h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .mission-card p {
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 520px;
+        }
+
+        /* VALUES */
+
+        .center-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .center-heading .section-description {
+            margin-inline: auto;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .value-card {
+            padding: 30px 24px;
+            text-align: center;
+            border: 1px solid #e5e9ed;
+            border-radius: var(--radius-medium);
+            background: var(--white);
+            box-shadow: var(--shadow-small);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .value-icon {
+            width: 66px;
+            height: 66px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .value-icon svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .value-card:nth-child(2) .value-icon {
+            background: #e8f2ff;
+            color: var(--blue);
+        }
+
+        .value-card:nth-child(3) .value-icon {
+            background: #fff1e7;
+            color: var(--orange);
+        }
+
+        .value-card:nth-child(4) .value-icon {
+            background: #fff6d8;
+            color: #a97900;
+        }
+
+        .value-card h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: var(--gray);
+            font-size: 0.84rem;
+        }
+
+        /* APPROACH */
+
+        .approach-section {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4, 31, 30, 0.96),
+                    rgba(4, 31, 30, 0.76)
+                ),
+                url("https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1900&q=85")
+                center / cover no-repeat;
+            color: var(--white);
+        }
+
+        .approach-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .approach-layout .section-title {
+            color: var(--white);
+        }
+
+        .approach-layout .section-description {
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .approach-steps {
+            display: grid;
+            gap: 18px;
+        }
+
+        .approach-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 17px;
+            padding: 22px;
+            border-radius: var(--radius-medium);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(8px);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--primary);
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+        }
+
+        .approach-step h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .approach-step p {
+            font-size: 0.83rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        /* LEADERSHIP */
+
+        .team-section {
+            background: var(--off-white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        .team-card {
+            overflow: hidden;
+            border-radius: var(--radius-medium);
+            background: var(--white);
+            box-shadow: var(--shadow-small);
+            border: 1px solid #e6e9ec;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .team-card img {
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .team-content {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .team-content h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.08rem;
+            margin-bottom: 4px;
+        }
+
+        .team-content span {
+            display: block;
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .team-content p {
+            color: var(--gray);
+            font-size: 0.82rem;
+        }
+
+        /* CTA */
+
+        .about-cta {
+            padding: 65px 0;
+            color: var(--white);
+            background:
+                radial-gradient(
+                    circle at 10% 30%,
+                    rgba(47, 143, 53, 0.26),
+                    transparent 30%
+                ),
+                linear-gradient(135deg, var(--navy-dark), var(--navy-light));
+        }
+
+        .cta-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .cta-content h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 8px;
+        }
+
+        .cta-content p {
+            max-width: 680px;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            color: rgba(255, 255, 255, 0.8);
+            background: var(--navy-dark);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr repeat(3, 1fr) 1.25fr;
+            gap: 35px;
+            margin-bottom: 45px;
+        }
+
+        .footer .brand-text strong {
+            color: var(--white);
+        }
+
+        .footer-brand p {
+            font-size: 0.82rem;
+            margin: 20px 0;
+            max-width: 260px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.09);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--white);
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-family: "Poppins", sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: #74cf79;
+            padding-left: 4px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            font-size: 0.8rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-item svg {
+            flex-shrink: 0;
+            width: 17px;
+            height: 17px;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 0.75rem;
+        }
+
+        /* BACK TO TOP */
+
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 900;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            color: var(--white);
+            background: var(--primary);
+            box-shadow: 0 12px 25px rgba(47, 143, 53, 0.34);
+            display: grid;
+            place-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: var(--transition);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* REVEAL */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1100px) {
+            .navigation {
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                width: min(380px, 88%);
+                height: calc(100vh - 76px);
+                background: var(--white);
+                padding: 35px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+                box-shadow: -15px 20px 35px rgba(0, 0, 0, 0.13);
+                transition: right 0.35s ease;
+            }
+
+            .navigation.open {
+                right: 0;
+            }
+
+            .navigation a {
+                font-size: 1rem;
+            }
+
+            .menu-button {
+                display: grid;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1.5fr repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 850px) {
+            .about-intro,
+            .approach-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 460px;
+            }
+
+            .about-image-badge {
+                right: 18px;
+            }
+
+            .mission-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card {
+                display: grid;
+                grid-template-columns: 0.85fr 1.15fr;
+            }
+
+            .team-card img {
+                height: 100%;
+                min-height: 300px;
+            }
+
+            .team-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+            }
+
+            .cta-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .section {
+                padding: 68px 0;
+            }
+
+            .brand-text strong {
+                font-size: 0.94rem;
+            }
+
+            .brand-text span {
+                font-size: 0.53rem;
+            }
+
+            .page-hero {
+                min-height: 520px;
+                background:
+                    linear-gradient(
+                        rgba(4, 27, 45, 0.86),
+                        rgba(4, 27, 45, 0.86)
+                    ),
+                    url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=85")
+                    center / cover no-repeat;
+            }
+
+            .page-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-image img {
+                height: 390px;
+            }
+
+            .about-image-badge {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: 100%;
+                margin-top: 16px;
+            }
+
+            .about-checks {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-card {
+                padding: 30px 24px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card {
+                display: block;
+            }
+
+            .team-card img {
+                height: 330px;
+                min-height: 0;
+            }
+
+            .team-content {
+                text-align: center;
+            }
+
+            .cta-buttons,
+            .cta-buttons .button {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container navbar">
+
+            <a href="index.html" class="brand" aria-label="HopeBridge home">
+                <div class="brand-logo" aria-hidden="true"></div>
+
+                <div class="brand-text">
+                    <strong>HopeBridge</strong>
+                    <span>Uganda Foundation</span>
+                </div>
+            </a>
+
+            <nav class="navigation" id="navigation">
+                <a href="about.html" class="active">About Us</a>
+                <a href="programs.html">Our Work</a>
+                <a href="volunteer.html">Get Involved</a>
+                <a href="blog.html">Stories & News</a>
+                <a href="reports.html">Resources</a>
+                <a href="donate.html" class="nav-donate">Donate</a>
+            </nav>
+
+            <div class="header-actions">
+                <button
+                    class="icon-button"
+                    aria-label="Search website"
+                >
+                    <i data-lucide="search"></i>
+                </button>
+
+                <button
+                    class="icon-button menu-button"
+                    id="menuButton"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content reveal">
+
+                    <span class="page-hero-tag">
+                        About HopeBridge
+                    </span>
+
+                    <h1>
+                        Together, We Build a Better Future
+                    </h1>
+
+                    <p>
+                        We are a community-focused non-profit organization
+                        working to create lasting opportunities for vulnerable
+                        children, families and communities across Uganda.
+                    </p>
+
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a>
+                        <i data-lucide="chevron-right"></i>
+                        <span>About Us</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE -->
+        <section class="section">
+            <div class="container about-intro">
+
+                <div class="about-image reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=1100&q=85"
+                        alt="Community members working together"
+                    >
+
+                    <div class="about-image-badge">
+                        <strong>Hope</strong>
+                        <span>
+                            begins when communities are given opportunities.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="about-content reveal">
+
+                    <span class="section-tag">Who We Are</span>
+
+                    <h2 class="section-title">
+                        A Bridge Between Hope and Opportunity
+                    </h2>
+
+                    <p>
+                        HopeBridge Uganda Foundation is a non-profit
+                        organization committed to improving the lives of
+                        vulnerable communities through sustainable,
+                        community-led development.
+                    </p>
+
+                    <p>
+                        Our work focuses on education, healthcare, rural
+                        development, child protection, poverty alleviation and
+                        community empowerment. We believe every person deserves
+                        the opportunity to live a healthy, safe and productive
+                        life.
+                    </p>
+
+                    <p>
+                        We work directly with communities, local leaders,
+                        volunteers and development partners to identify real
+                        challenges and create practical solutions that can
+                        continue serving people for years.
+                    </p>
+
+                    <ul class="about-checks">
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Community-led programs
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Sustainable solutions
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Child-centred support
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Transparent partnerships
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Inclusive development
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Long-term community impact
+                        </li>
+                    </ul>
+
+                    <a
+                        href="programs.html"
+                        class="button button-primary"
+                    >
+                        Explore Our Programs
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION AND VISION -->
+        <section class="section mission-section">
+            <div class="container mission-grid">
+
+                <article class="mission-card reveal">
+
+                    <div class="mission-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+
+                    <h2>Our Mission</h2>
+
+                    <p>
+                        To empower vulnerable children, families and
+                        communities through education, healthcare, child
+                        protection, economic opportunity and sustainable
+                        community development programs.
+                    </p>
+
+                </article>
+
+                <article class="mission-card reveal">
+
+                    <div class="mission-icon">
+                        <i data-lucide="eye"></i>
+                    </div>
+
+                    <h2>Our Vision</h2>
+
+                    <p>
+                        A Uganda where every child, family and community has
+                        access to the opportunities, resources and support
+                        needed to live with dignity, hope and independence.
+                    </p>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CORE VALUES -->
+        <section class="section">
+            <div class="container">
+
+                <header class="center-heading reveal">
+                    <span class="section-tag">Our Core Values</span>
+
+                    <h2 class="section-title">
+                        The Principles That Guide Our Work
+                    </h2>
+
+                    <p class="section-description">
+                        Our values shape how we work with communities,
+                        volunteers, partners and supporters.
+                    </p>
+                </header>
+
+                <div class="values-grid">
+
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+
+                        <h3>Compassion</h3>
+
+                        <p>
+                            We serve people with kindness, empathy, respect and
+                            a genuine desire to improve lives.
+                        </p>
+                    </article>
+
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <h3>Integrity</h3>
+
+                        <p>
+                            We act honestly, responsibly and transparently in
+                            every program and partnership.
+                        </p>
+                    </article>
+
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+
+                        <h3>Community</h3>
+
+                        <p>
+                            We listen to communities and place local people at
+                            the centre of every decision.
+                        </p>
+                    </article>
+
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <i data-lucide="sprout"></i>
+                        </div>
+
+                        <h3>Sustainability</h3>
+
+                        <p>
+                            We create practical solutions that communities can
+                            maintain and grow over time.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR APPROACH -->
+        <section class="section approach-section">
+            <div class="container approach-layout">
+
+                <div class="reveal">
+                    <span class="section-tag">Our Approach</span>
+
+                    <h2 class="section-title">
+                        We Work With Communities, Not Just For Them
+                    </h2>
+
+                    <p class="section-description">
+                        Lasting change happens when communities participate in
+                        identifying challenges, designing solutions and leading
+                        development.
+                    </p>
+                </div>
+
+                <div class="approach-steps">
+
+                    <article class="approach-step reveal">
+                        <div class="step-number">01</div>
+
+                        <div>
+                            <h3>Listen and Understand</h3>
+
+                            <p>
+                                We consult communities to understand their
+                                priorities, needs and existing strengths.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="approach-step reveal">
+                        <div class="step-number">02</div>
+
+                        <div>
+                            <h3>Design Together</h3>
+
+                            <p>
+                                Community members help shape solutions that are
+                                practical, inclusive and locally appropriate.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="approach-step reveal">
+                        <div class="step-number">03</div>
+
+                        <div>
+                            <h3>Implement and Empower</h3>
+
+                            <p>
+                                We provide resources, training and support while
+                                building local leadership and ownership.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="approach-step reveal">
+                        <div class="step-number">04</div>
+
+                        <div>
+                            <h3>Measure and Improve</h3>
+
+                            <p>
+                                We monitor progress, share lessons and improve
+                                programs based on evidence and community
+                                feedback.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP -->
+        <section class="section team-section">
+            <div class="container">
+
+                <header class="center-heading reveal">
+                    <span class="section-tag">Our Leadership</span>
+
+                    <h2 class="section-title">
+                        People Committed to Community Service
+                    </h2>
+
+                    <p class="section-description">
+                        Replace the example names, positions and photographs
+                        below with your official team information.
+                    </p>
+                </header>
+
+                <div class="team-grid">
+
+                    <article class="team-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85"
+                            alt="Executive director placeholder"
+                        >
+
+                        <div class="team-content">
+                            <h3>Your Full Name</h3>
+
+                            <span>Founder and Executive Director</span>
+
+                            <p>
+                                Provides leadership, strategic direction and
+                                oversight for the foundation's programs.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85"
+                            alt="Programs director placeholder"
+                        >
+
+                        <div class="team-content">
+                            <h3>Team Member Name</h3>
+
+                            <span>Programs Director</span>
+
+                            <p>
+                                Coordinates community programs, partnerships
+                                and project implementation.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="team-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85"
+                            alt="Community officer placeholder"
+                        >
+
+                        <div class="team-content">
+                            <h3>Team Member Name</h3>
+
+                            <span>Community Engagement Officer</span>
+
+                            <p>
+                                Works directly with local leaders, volunteers
+                                and beneficiary communities.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="about-cta">
+            <div class="container cta-content reveal">
+
+                <div>
+                    <h2>Join Us in Building Lasting Hope</h2>
+
+                    <p>
+                        Become a volunteer, partner or supporter and help us
+                        create opportunities for children, families and
+                        communities across Uganda.
+                    </p>
+                </div>
+
+                <div class="cta-buttons">
+                    <a
+                        href="volunteer.html"
+                        class="button button-primary"
+                    >
+                        Get Involved
+                    </a>
+
+                    <a
+                        href="donate.html"
+                        class="button button-outline-light"
+                    >
+                        Donate Now
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand">
+                        <div class="brand-logo" aria-hidden="true"></div>
+
+                        <div class="brand-text">
+                            <strong>HopeBridge</strong>
+                            <span>Uganda Foundation</span>
+                        </div>
+                    </a>
+
+                    <p>
+                        Building hope, transforming lives and empowering
+                        communities across Uganda.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Work</a></li>
+                        <li><a href="volunteer.html">Get Involved</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Our Programs</h4>
+
+                    <ul>
+                        <li><a href="programs.html">Education</a></li>
+                        <li><a href="programs.html">Healthcare</a></li>
+                        <li><a href="programs.html">Rural Development</a></li>
+                        <li><a href="programs.html">Child Protection</a></li>
+                        <li><a href="programs.html">Poverty Alleviation</a></li>
+                        <li><a href="programs.html">Community Empowerment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+
+                    <ul>
+                        <li><a href="blog.html">Stories & News</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+
+                    <div class="contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Kampala, Uganda</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>info@hopebridgeuganda.org</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>+256 700 123 456</span>
+                    </div>
+
+                    <a
+                        href="donate.html"
+                        class="button button-primary"
+                        style="margin-top: 10px;"
+                    >
+                        Donate
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="currentYear"></span>
+                    HopeBridge Uganda Foundation. All rights reserved.
+                </p>
+
+                <p>
+                    Built with compassion for communities across Uganda.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Return to top"
+    >
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+
+        const menuButton = document.getElementById("menuButton");
+        const navigation = document.getElementById("navigation");
+
+        menuButton.addEventListener("click", () => {
+            const menuIsOpen = navigation.classList.toggle("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(menuIsOpen)
+            );
+
+            menuButton.innerHTML = menuIsOpen
+                ? '<i data-lucide="x"></i>'
+                : '<i data-lucide="menu"></i>';
+
+            lucide.createIcons();
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navigation.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.innerHTML = '<i data-lucide="menu"></i>';
+                lucide.createIcons();
+            });
+        });
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>
