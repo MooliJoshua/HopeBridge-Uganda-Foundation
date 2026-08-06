@@ -1,1 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore the education, healthcare, rural development, child protection, poverty alleviation and community empowerment programs of HopeBridge Uganda Foundation."
+    >
+
+    <title>Our Programs | HopeBridge Uganda Foundation</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2f8f35;
+            --primary-dark: #1e6b26;
+            --primary-light: #eaf6eb;
+            --navy: #062d4d;
+            --navy-light: #0c426d;
+            --navy-dark: #031e34;
+            --orange: #f47721;
+            --gold: #f7c948;
+            --blue: #2374c6;
+            --white: #ffffff;
+            --off-white: #f7f9fb;
+            --light-gray: #edf1f4;
+            --gray: #68737d;
+            --dark: #14202b;
+            --shadow-small: 0 8px 24px rgba(6, 45, 77, 0.08);
+            --shadow-medium: 0 18px 45px rgba(6, 45, 77, 0.13);
+            --radius-medium: 18px;
+            --radius-large: 28px;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            color: var(--gray);
+            max-width: 700px;
+        }
+
+        .center-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .center-heading .section-description {
+            margin-inline: auto;
+        }
+
+        .button {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            border-radius: 7px;
+            padding: 12px 23px;
+            border: 2px solid transparent;
+            font-weight: 800;
+            font-size: 0.83rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .button-primary {
+            color: var(--white);
+            background: var(--primary);
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-outline-light {
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .button-outline-light:hover {
+            color: var(--navy);
+            background: var(--white);
+        }
+
+        .button-outline-dark {
+            color: var(--navy);
+            border-color: rgba(6, 45, 77, 0.25);
+        }
+
+        .button-outline-dark:hover {
+            color: var(--white);
+            background: var(--navy);
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background:
+                linear-gradient(135deg, var(--blue) 50%, transparent 50%),
+                linear-gradient(45deg, var(--primary) 50%, var(--gold) 50%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(6, 45, 77, 0.16);
+        }
+
+        .brand-logo::before {
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 24px;
+            left: 15px;
+            top: 9px;
+            background: var(--white);
+            border-radius: 70% 0 70% 0;
+            transform: rotate(45deg);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            color: var(--navy);
+            font-size: 1.13rem;
+            line-height: 1;
+        }
+
+        .brand-text span {
+            display: block;
+            color: var(--gray);
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: #202a33;
+            transition: var(--transition);
+        }
+
+        .navigation a:not(.nav-donate)::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            color: var(--primary);
+        }
+
+        .navigation a:hover::after,
+        .navigation a.active::after {
+            width: 100%;
+        }
+
+        .nav-donate {
+            color: var(--white) !important;
+            background: var(--primary);
+            padding: 11px 18px;
+            border-radius: 6px;
+        }
+
+        .nav-donate:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-button {
+            border: 0;
+            background: transparent;
+            color: var(--navy);
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: var(--transition);
+        }
+
+        .icon-button:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        /* HERO */
+
+        .page-hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 30, 52, 0.96),
+                    rgba(3, 30, 52, 0.72),
+                    rgba(3, 30, 52, 0.2)
+                ),
+                url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1900&q=85")
+                center / cover no-repeat;
+        }
+
+        .page-hero-content {
+            width: min(720px, 100%);
+            padding: 90px 0;
+        }
+
+        .page-hero-tag {
+            color: #7bdd81;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        .page-hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            line-height: 1.08;
+            margin: 18px 0;
+        }
+
+        .page-hero p {
+            max-width: 620px;
+            font-size: 1.08rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 26px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .breadcrumbs svg {
+            width: 16px;
+        }
+
+        /* PROGRAM SUMMARY */
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .summary-card {
+            padding: 30px;
+            border-radius: var(--radius-medium);
+            background: var(--white);
+            border: 1px solid #e5e9ed;
+            box-shadow: var(--shadow-small);
+            transition: var(--transition);
+        }
+
+        .summary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .summary-icon {
+            width: 64px;
+            height: 64px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .summary-card:nth-child(2) .summary-icon {
+            background: #e8f2ff;
+            color: var(--blue);
+        }
+
+        .summary-card:nth-child(3) .summary-icon {
+            background: #fff2e8;
+            color: var(--orange);
+        }
+
+        .summary-card h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .summary-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* PROGRAMS */
+
+        .programs-section {
+            background: var(--off-white);
+        }
+
+        .program-list {
+            display: grid;
+            gap: 36px;
+        }
+
+        .program-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            border-radius: var(--radius-large);
+            background: var(--white);
+            border: 1px solid #e5e9ed;
+            box-shadow: var(--shadow-small);
+        }
+
+        .program-item:nth-child(even) .program-image {
+            order: 2;
+        }
+
+        .program-image {
+            min-height: 430px;
+        }
+
+        .program-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .program-content {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .program-number {
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .program-content h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .program-content > p {
+            color: var(--gray);
+            margin-bottom: 24px;
+        }
+
+        .program-features {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .program-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .program-features svg {
+            width: 20px;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .program-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+        }
+
+        .program-link:hover {
+            color: var(--primary-dark);
+            gap: 12px;
+        }
+
+        /* PROCESS */
+
+        .process-section {
+            color: var(--white);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(3, 30, 52, 0.98),
+                    rgba(12, 66, 109, 0.93)
+                );
+        }
+
+        .process-section .section-title {
+            color: var(--white);
+        }
+
+        .process-section .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            padding: 30px 24px;
+            border-radius: var(--radius-medium);
+            background: rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .process-number {
+            width: 50px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--primary);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .process-card h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 9px;
+        }
+
+        .process-card p {
+            color: rgba(255, 255, 255, 0.77);
+            font-size: 0.85rem;
+        }
+
+        /* CTA */
+
+        .program-cta {
+            padding: 70px 0;
+            color: var(--white);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(24, 92, 31, 0.95),
+                    rgba(47, 143, 53, 0.9)
+                ),
+                url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1900&q=85")
+                center / cover no-repeat;
+        }
+
+        .cta-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .cta-content h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 10px;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.84);
+            max-width: 690px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            color: rgba(255, 255, 255, 0.8);
+            background: var(--navy-dark);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr repeat(3, 1fr) 1.25fr;
+            gap: 35px;
+            margin-bottom: 45px;
+        }
+
+        .footer .brand-text strong {
+            color: var(--white);
+        }
+
+        .footer-brand p {
+            font-size: 0.82rem;
+            margin: 20px 0;
+            max-width: 260px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.09);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-family: "Poppins", sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: #74cf79;
+            padding-left: 4px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            font-size: 0.8rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-item svg {
+            flex-shrink: 0;
+            width: 17px;
+            height: 17px;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 0.75rem;
+        }
+
+        /* ANIMATIONS */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 900;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            color: var(--white);
+            background: var(--primary);
+            box-shadow: 0 12px 25px rgba(47, 143, 53, 0.34);
+            display: grid;
+            place-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: var(--transition);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1100px) {
+            .navigation {
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                width: min(380px, 88%);
+                height: calc(100vh - 76px);
+                background: var(--white);
+                padding: 35px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+                box-shadow: -15px 20px 35px rgba(0, 0, 0, 0.13);
+                transition: right 0.35s ease;
+            }
+
+            .navigation.open {
+                right: 0;
+            }
+
+            .menu-button {
+                display: grid;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1.5fr repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 850px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-item {
+                grid-template-columns: 1fr;
+            }
+
+            .program-item:nth-child(even) .program-image {
+                order: 0;
+            }
+
+            .program-image {
+                min-height: 340px;
+            }
+
+            .cta-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .section {
+                padding: 68px 0;
+            }
+
+            .brand-text strong {
+                font-size: 0.94rem;
+            }
+
+            .brand-text span {
+                font-size: 0.53rem;
+            }
+
+            .page-hero {
+                min-height: 520px;
+                background:
+                    linear-gradient(
+                        rgba(3, 30, 52, 0.85),
+                        rgba(3, 30, 52, 0.85)
+                    ),
+                    url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85")
+                    center / cover no-repeat;
+            }
+
+            .page-hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .program-content {
+                padding: 30px 23px;
+            }
+
+            .program-image {
+                min-height: 270px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons,
+            .cta-buttons .button {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container navbar">
+
+            <a href="index.html" class="brand">
+                <div class="brand-logo"></div>
+
+                <div class="brand-text">
+                    <strong>HopeBridge</strong>
+                    <span>Uganda Foundation</span>
+                </div>
+            </a>
+
+            <nav class="navigation" id="navigation">
+                <a href="about.html">About Us</a>
+                <a href="programs.html" class="active">Our Work</a>
+                <a href="volunteer.html">Get Involved</a>
+                <a href="blog.html">Stories & News</a>
+                <a href="reports.html">Resources</a>
+                <a href="donate.html" class="nav-donate">Donate</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-button" aria-label="Search">
+                    <i data-lucide="search"></i>
+                </button>
+
+                <button
+                    class="icon-button menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content reveal">
+
+                    <span class="page-hero-tag">Our Work</span>
+
+                    <h1>
+                        Programs That Create Lasting Change
+                    </h1>
+
+                    <p>
+                        We work with communities to improve education,
+                        healthcare, livelihoods, child protection and rural
+                        development across Uganda.
+                    </p>
+
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a>
+                        <i data-lucide="chevron-right"></i>
+                        <span>Our Programs</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <header class="center-heading reveal">
+                    <span class="section-tag">How We Help</span>
+
+                    <h2 class="section-title">
+                        Community-Led Solutions for Real Challenges
+                    </h2>
+
+                    <p class="section-description">
+                        Our programs are designed with communities to respond
+                        to local needs and create sustainable opportunities for
+                        children, families and vulnerable groups.
+                    </p>
+                </header>
+
+                <div class="summary-grid">
+
+                    <article class="summary-card reveal">
+                        <div class="summary-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+
+                        <h3>Community-Led</h3>
+
+                        <p>
+                            Local communities participate in identifying needs,
+                            planning activities and measuring results.
+                        </p>
+                    </article>
+
+                    <article class="summary-card reveal">
+                        <div class="summary-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <h3>Inclusive and Safe</h3>
+
+                        <p>
+                            Our programs promote dignity, equality, child
+                            protection and participation for vulnerable people.
+                        </p>
+                    </article>
+
+                    <article class="summary-card reveal">
+                        <div class="summary-icon">
+                            <i data-lucide="sprout"></i>
+                        </div>
+
+                        <h3>Sustainable</h3>
+
+                        <p>
+                            We build local capacity so communities can continue
+                            benefiting long after a project ends.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section programs-section">
+            <div class="container">
+
+                <header class="center-heading reveal">
+                    <span class="section-tag">Focus Areas</span>
+
+                    <h2 class="section-title">
+                        Our Main Programs
+                    </h2>
+
+                    <p class="section-description">
+                        These are the areas through which HopeBridge Uganda
+                        Foundation aims to support community development.
+                    </p>
+                </header>
+
+                <div class="program-list">
+
+                    <article class="program-item reveal">
+
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1100&q=85"
+                                alt="Children learning in a classroom"
+                            >
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-number">
+                                Program 01
+                            </span>
+
+                            <h2>Education</h2>
+
+                            <p>
+                                We aim to improve access to quality education,
+                                learning materials, school support and skills
+                                development for children and young people.
+                            </p>
+
+                            <ul class="program-features">
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    School supplies and learning materials
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Education support for vulnerable children
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Digital literacy and computer training
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Youth mentorship and career guidance
+                                </li>
+                            </ul>
+
+                            <a href="projects.html" class="program-link">
+                                View Education Projects
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="program-item reveal">
+
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&q=85"
+                                alt="Healthcare worker supporting patients"
+                            >
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-number">
+                                Program 02
+                            </span>
+
+                            <h2>Healthcare</h2>
+
+                            <p>
+                                We support community health awareness,
+                                preventive care and improved access to
+                                essential health services.
+                            </p>
+
+                            <ul class="program-features">
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Community health education
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Maternal and child health support
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Medical outreach activities
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Hygiene and sanitation promotion
+                                </li>
+                            </ul>
+
+                            <a href="projects.html" class="program-link">
+                                View Health Projects
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="program-item reveal">
+
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1100&q=85"
+                                alt="Farmer working in a rural community"
+                            >
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-number">
+                                Program 03
+                            </span>
+
+                            <h2>Rural Development</h2>
+
+                            <p>
+                                We work to strengthen rural livelihoods through
+                                agriculture, clean water, infrastructure and
+                                locally led development.
+                            </p>
+
+                            <ul class="program-features">
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Sustainable agriculture training
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Clean water and sanitation initiatives
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Environmental conservation
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Community infrastructure support
+                                </li>
+                            </ul>
+
+                            <a href="projects.html" class="program-link">
+                                View Rural Projects
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="program-item reveal">
+
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=1100&q=85"
+                                alt="Children receiving care and support"
+                            >
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-number">
+                                Program 04
+                            </span>
+
+                            <h2>Child Protection</h2>
+
+                            <p>
+                                We aim to protect orphans and vulnerable
+                                children from neglect, abuse, exploitation and
+                                unsafe living conditions.
+                            </p>
+
+                            <ul class="program-features">
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Child safeguarding awareness
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Support for orphans and vulnerable children
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Family and community support
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Referral and protection services
+                                </li>
+                            </ul>
+
+                            <a href="projects.html" class="program-link">
+                                View Protection Projects
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="program-item reveal">
+
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1100&q=85"
+                                alt="Young people receiving skills training"
+                            >
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-number">
+                                Program 05
+                            </span>
+
+                            <h2>Poverty Alleviation</h2>
+
+                            <p>
+                                We support vulnerable households with skills,
+                                entrepreneurship opportunities and practical
+                                livelihood solutions.
+                            </p>
+
+                            <ul class="program-features">
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Vocational and business skills training
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Youth and women entrepreneurship
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Savings and financial literacy
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Household livelihood support
+                                </li>
+                            </ul>
+
+                            <a href="projects.html" class="program-link">
+                                View Livelihood Projects
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="program-item reveal">
+
+                        <div class="program-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1100&q=85"
+                                alt="Community members working together"
+                            >
+                        </div>
+
+                        <div class="program-content">
+                            <span class="program-number">
+                                Program 06
+                            </span>
+
+                            <h2>Community Empowerment</h2>
+
+                            <p>
+                                We strengthen local leadership, participation,
+                                volunteerism and community ownership of
+                                development activities.
+                            </p>
+
+                            <ul class="program-features">
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Community leadership training
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Volunteer and youth engagement
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Women and youth participation
+                                </li>
+
+                                <li>
+                                    <i data-lucide="circle-check-big"></i>
+                                    Local partnership development
+                                </li>
+                            </ul>
+
+                            <a href="projects.html" class="program-link">
+                                View Community Projects
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section process-section">
+            <div class="container">
+
+                <header class="center-heading reveal">
+                    <span class="section-tag">Our Method</span>
+
+                    <h2 class="section-title">
+                        How Our Programs Work
+                    </h2>
+
+                    <p class="section-description">
+                        We follow a community-centred process from identifying
+                        needs to evaluating results.
+                    </p>
+                </header>
+
+                <div class="process-grid">
+
+                    <article class="process-card reveal">
+                        <div class="process-number">01</div>
+
+                        <h3>Assess Needs</h3>
+
+                        <p>
+                            We listen to community members and identify the most
+                            important local challenges.
+                        </p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <div class="process-number">02</div>
+
+                        <h3>Plan Together</h3>
+
+                        <p>
+                            Local leaders and beneficiaries help design
+                            practical and inclusive solutions.
+                        </p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <div class="process-number">03</div>
+
+                        <h3>Deliver Support</h3>
+
+                        <p>
+                            We provide training, resources, coordination and
+                            technical support.
+                        </p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <div class="process-number">04</div>
+
+                        <h3>Measure Results</h3>
+
+                        <p>
+                            We track outcomes, gather feedback and improve
+                            future programs.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="program-cta">
+            <div class="container cta-content reveal">
+
+                <div>
+                    <h2>Help Us Turn These Programs into Action</h2>
+
+                    <p>
+                        Join as a volunteer, community partner or supporter and
+                        help create meaningful opportunities across Uganda.
+                    </p>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="volunteer.html" class="button button-outline-light">
+                        Volunteer
+                    </a>
+
+                    <a href="donate.html" class="button button-primary">
+                        Donate Now
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand">
+                        <div class="brand-logo"></div>
+
+                        <div class="brand-text">
+                            <strong>HopeBridge</strong>
+                            <span>Uganda Foundation</span>
+                        </div>
+                    </a>
+
+                    <p>
+                        Building hope, transforming lives and empowering
+                        communities across Uganda.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Work</a></li>
+                        <li><a href="volunteer.html">Get Involved</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Our Programs</h4>
+
+                    <ul>
+                        <li><a href="programs.html">Education</a></li>
+                        <li><a href="programs.html">Healthcare</a></li>
+                        <li><a href="programs.html">Rural Development</a></li>
+                        <li><a href="programs.html">Child Protection</a></li>
+                        <li><a href="programs.html">Poverty Alleviation</a></li>
+                        <li><a href="programs.html">Community Empowerment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+
+                    <ul>
+                        <li><a href="blog.html">Stories & News</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+
+                    <div class="contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Kampala, Uganda</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>info@hopebridgeuganda.org</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>+256 700 123 456</span>
+                    </div>
+
+                    <a
+                        href="donate.html"
+                        class="button button-primary"
+                        style="margin-top: 10px;"
+                    >
+                        Donate
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="currentYear"></span>
+                    HopeBridge Uganda Foundation. All rights reserved.
+                </p>
+
+                <p>
+                    Built with compassion for communities across Uganda.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Return to top"
+    >
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+
+        const menuButton = document.getElementById("menuButton");
+        const navigation = document.getElementById("navigation");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = navigation.classList.toggle("open");
+
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+
+            menuButton.innerHTML = isOpen
+                ? '<i data-lucide="x"></i>'
+                : '<i data-lucide="menu"></i>';
+
+            lucide.createIcons();
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navigation.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.innerHTML = '<i data-lucide="menu"></i>';
+                lucide.createIcons();
+            });
+        });
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        revealElements.forEach((element) => {
+            observer.observe(element);
+        });
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            backToTop.classList.toggle(
+                "show",
+                window.scrollY > 500
+            );
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>
