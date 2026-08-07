@@ -994,95 +994,124 @@
                     </p>
                 </div>
 
-                <form class="sponsor-form" id="sponsorForm">
+      <form
+    class="sponsor-form"
+    id="sponsorForm"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+>
 
-                    <div class="form-grid">
+    <input
+        type="hidden"
+        name="access_key"
+        value="057a93d9-c0c9-469a-b754-602044e38187"
+    >
 
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                required
-                                placeholder="Your full name"
-                            >
-                        </div>
+    <input
+        type="hidden"
+        name="subject"
+        value="New HopeBridge Sponsorship Enquiry"
+    >
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input
-                                type="email"
-                                id="email"
-                                required
-                                placeholder="you@example.com"
-                            >
-                        </div>
+    <input
+        type="hidden"
+        name="from_name"
+        value="HopeBridge Uganda Foundation Website"
+    >
 
-                        <div class="form-group">
-                            <label for="organization">
-                                Organization / Company
-                            </label>
+<div class="form-grid">
 
-                            <input
-                                type="text"
-                                id="organization"
-                                placeholder="Optional"
-                            >
-                        </div>
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your full name"
+        >
+    </div>
 
-                        <div class="form-group">
-                            <label for="country">Country</label>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+        >
+    </div>
 
-                            <input
-                                type="text"
-                                id="country"
-                                placeholder="Your country"
-                            >
-                        </div>
+    <div class="form-group">
+        <label for="organization">Organization / Company</label>
+        <input
+            type="text"
+            id="organization"
+            name="organization"
+            placeholder="Optional"
+        >
+    </div>
 
-                        <div class="form-group full">
-                            <label for="interest">
-                                Area You Would Like to Support
-                            </label>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="Your country"
+        >
+    </div>
 
-                            <select id="interest">
-                                <option>Education</option>
-                                <option>Healthcare</option>
-                                <option>Rural Development</option>
-                                <option>Child Protection</option>
-                                <option>Livelihoods</option>
-                                <option>Community Empowerment</option>
-                                <option>General Partnership</option>
-                            </select>
-                        </div>
+    <div class="form-group full">
+        <label for="interest">
+            Area You Would Like to Support
+        </label>
 
-                        <div class="form-group full">
-                            <label for="message">
-                                Tell Us About Your Partnership Interest
-                            </label>
+        <select
+            id="interest"
+            name="area_of_interest"
+            required
+        >
+            <option value="">Select an area</option>
+            <option value="Education">Education</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Rural Development">Rural Development</option>
+            <option value="Child Protection">Child Protection</option>
+            <option value="Livelihoods">Livelihoods</option>
+            <option value="Community Empowerment">Community Empowerment</option>
+            <option value="General Partnership">General Partnership</option>
+        </select>
+    </div>
 
-                            <textarea
-                                id="message"
-                                placeholder="How would you like to support or partner with HopeBridge?"
-                            ></textarea>
-                        </div>
+    <div class="form-group full">
+        <label for="message">
+            Tell Us About Your Partnership Interest
+        </label>
 
-                        <div class="form-group full">
-                            <button
-                                type="submit"
-                                class="button button-primary"
-                            >
-                                Send Sponsorship Interest
-                                <i data-lucide="send"></i>
-                            </button>
-                        </div>
+        <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="How would you like to support or partner with HopeBridge?"
+        ></textarea>
+    </div>
 
-                    </div>
+    <div class="form-group full">
+        <button
+            type="submit"
+            class="button button-primary"
+        >
+            Send Sponsorship Interest
+            <i data-lucide="send"></i>
+        </button>
+    </div>
 
-                    <p class="form-note">
-                        This form is currently a website demonstration and does
-                        not send information to a server yet.
-                    </p>
+</div>
+          
+             <p class="form-note">
+    Your sponsorship enquiry will be sent securely to HopeBridge Uganda Foundation.
+</p>
 
                 </form>
 
@@ -1178,18 +1207,7 @@
         document.getElementById("currentYear").textContent =
             new Date().getFullYear();
 
-        const sponsorForm = document.getElementById("sponsorForm");
-
-        sponsorForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            alert(
-                "Thank you for your interest in partnering with HopeBridge Uganda Foundation."
-            );
-
-            sponsorForm.reset();
-        });
-    </script>
+           </script>
 
 </body>
 </html>
