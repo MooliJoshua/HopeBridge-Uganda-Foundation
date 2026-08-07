@@ -631,6 +631,7 @@
             bottom: 15px;
             background: rgba(255, 255, 255, 0.92);
             color: var(--primary-dark);
+            
             border-radius: 50px;
             padding: 6px 11px;
             font-size: 0.63rem;
@@ -965,16 +966,16 @@
 
         @media (max-width: 850px) {
             .hero {
-                min-height: 610px;
-                background:
-                    linear-gradient(
-                        90deg,
-                        rgba(7, 31, 14, 0.93),
-                        rgba(7, 31, 14, 0.58)
-                    ),
-                    url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1400&q=85")
-                    center / cover no-repeat;
-            }
+    min-height: 610px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 31, 14, 0.93),
+            rgba(7, 31, 14, 0.58)
+        ),
+        url("assets/images/village_life.jpg")
+        center / cover no-repeat;
+}
 
             .impact-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1097,7 +1098,7 @@
                         rgba(4, 28, 23, 0.85),
                         rgba(4, 28, 23, 0.85)
                     ),
-                    url("https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1200&q=85")
+                  url("assets/images/smallholder_farming.jpg")
                     center / cover no-repeat;
             }
 
@@ -1463,11 +1464,11 @@
 
                     <article class="story-card reveal">
                         <div class="story-image">
-                            <img
-                                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85"
-                                alt="Students learning together"
-                                loading="lazy"
-                            >
+                          <img
+    src="assets/images/rural_classroom.jpg"
+    alt="Children learning in a rural community"
+    loading="lazy"
+>  
 
                             <span class="story-category">Education</span>
                         </div>
@@ -1489,11 +1490,11 @@
 
                     <article class="story-card reveal">
                         <div class="story-image">
-                            <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85"
-                                alt="Healthcare worker supporting a community"
-                                loading="lazy"
-                            >
+                          <img
+    src="assets/images/community_health.jpg"
+    alt="Community health outreach"
+    loading="lazy"
+> 
 
                             <span class="story-category">Healthcare</span>
                         </div>
@@ -1515,12 +1516,11 @@
 
                     <article class="story-card reveal">
                         <div class="story-image">
-                            <img
-                                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
-                                alt="Community members working together"
-                                loading="lazy"
-                            >
-
+                           <img
+    src="assets/images/village_market.jpg"
+    alt="Community members participating in rural livelihoods"
+    loading="lazy"
+>
                             <span class="story-category">Community</span>
                         </div>
 
@@ -1798,72 +1798,7 @@
             revealObserver.observe(element);
         });
 
-        // Animated impact statistics
-        const numberElements =
-            document.querySelectorAll(".impact-number");
-
-        let statisticsStarted = false;
-
-        const formatNumber = (number) => {
-            return new Intl.NumberFormat("en-US").format(number);
-        };
-
-        const animateNumber = (element) => {
-            const target = Number(element.dataset.target);
-            const suffix = element.dataset.suffix || "";
-            const duration = 1800;
-            const startTime = performance.now();
-
-            const updateNumber = (currentTime) => {
-                const progress = Math.min(
-                    (currentTime - startTime) / duration,
-                    1
-                );
-
-                const easedProgress =
-                    1 - Math.pow(1 - progress, 3);
-
-                const currentValue = Math.floor(
-                    target * easedProgress
-                );
-
-                element.textContent =
-                    formatNumber(currentValue) + suffix;
-
-                if (progress < 1) {
-                    requestAnimationFrame(updateNumber);
-                }
-            };
-
-            requestAnimationFrame(updateNumber);
-        };
-
-        const impactSection =
-            document.querySelector(".impact-strip");
-
-        const statisticsObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (
-                        entry.isIntersecting &&
-                        !statisticsStarted
-                    ) {
-                        statisticsStarted = true;
-
-                        numberElements.forEach((element) => {
-                            animateNumber(element);
-                        });
-                    }
-                });
-            },
-            {
-                threshold: 0.35
-            }
-        );
-
-        statisticsObserver.observe(impactSection);
-
-        // Newsletter form demonstration
+           // Newsletter form demonstration
         const newsletterForm =
             document.getElementById("newsletterForm");
 
