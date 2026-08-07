@@ -2,19 +2,1194 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsor Us | HopeBridge Uganda Foundation</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Become a sponsor of HopeBridge Uganda Foundation and support education, healthcare, rural development, child protection and community empowerment."
+    >
+
+    <title>Become a Sponsor | HopeBridge Uganda Foundation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2f8f35;
+            --primary-dark: #1e6b26;
+            --primary-light: #eaf6eb;
+
+            --navy: #062d4d;
+            --navy-light: #0c426d;
+            --navy-dark: #031e34;
+
+            --white: #ffffff;
+            --off-white: #f7f9fb;
+            --gray: #68737d;
+            --dark: #14202b;
+
+            --shadow-small: 0 8px 24px rgba(6, 45, 77, 0.08);
+            --shadow-medium: 0 18px 45px rgba(6, 45, 77, 0.13);
+
+            --radius-medium: 18px;
+            --radius-large: 28px;
+
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            color: var(--gray);
+            max-width: 700px;
+        }
+
+        .button {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            border-radius: 7px;
+            padding: 12px 23px;
+            border: 2px solid transparent;
+            font-weight: 800;
+            font-size: 0.83rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .button-primary {
+            color: var(--white);
+            background: var(--primary);
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-outline-light {
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.85);
+            background: transparent;
+        }
+
+        .button-outline-light:hover {
+            color: var(--navy);
+            background: var(--white);
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background:
+                linear-gradient(135deg, #2374c6 50%, transparent 50%),
+                linear-gradient(45deg, var(--primary) 50%, #f7c948 50%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(6, 45, 77, 0.16);
+        }
+
+        .brand-logo::before {
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 24px;
+            left: 15px;
+            top: 9px;
+            background: var(--white);
+            border-radius: 70% 0 70% 0;
+            transform: rotate(45deg);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            color: var(--navy);
+            font-size: 1.13rem;
+            line-height: 1;
+        }
+
+        .brand-text span {
+            display: block;
+            color: var(--gray);
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .navigation a {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: #202a33;
+            transition: var(--transition);
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            color: var(--primary);
+        }
+
+        .nav-donate {
+            color: var(--white) !important;
+            background: var(--primary);
+            padding: 11px 18px;
+            border-radius: 6px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon-button {
+            border: 0;
+            background: transparent;
+            color: var(--navy);
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        /* HERO */
+
+        .page-hero {
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 30, 52, 0.96),
+                    rgba(3, 30, 52, 0.74),
+                    rgba(3, 30, 52, 0.20)
+                ),
+                url("assets/images/village_life.jpg")
+                center / cover no-repeat;
+        }
+
+        .page-hero-content {
+            width: min(720px, 100%);
+            padding: 90px 0;
+        }
+
+        .page-hero-tag {
+            color: #80d886;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .page-hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            line-height: 1.08;
+            margin: 18px 0;
+        }
+
+        .page-hero p {
+            max-width: 630px;
+            font-size: 1.06rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 26px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* WHY SPONSOR */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .intro-image img {
+            height: 520px;
+            object-fit: cover;
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .intro-content p {
+            color: var(--gray);
+            margin-bottom: 17px;
+        }
+
+        .sponsor-list {
+            display: grid;
+            gap: 13px;
+            margin: 28px 0 32px;
+        }
+
+        .sponsor-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .sponsor-list svg {
+            width: 20px;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* SUPPORT AREAS */
+
+        .support-section {
+            background: var(--off-white);
+        }
+
+        .center-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .center-heading .section-description {
+            margin-inline: auto;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .support-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius-medium);
+            border: 1px solid #e6eaed;
+            box-shadow: var(--shadow-small);
+            transition: var(--transition);
+        }
+
+        .support-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .support-icon {
+            width: 62px;
+            height: 62px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .support-card h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .support-card p {
+            color: var(--gray);
+            font-size: 0.87rem;
+        }
+
+        /* PARTNERSHIP TYPES */
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .partnership-card {
+            border-radius: var(--radius-medium);
+            padding: 34px;
+            color: var(--white);
+            background:
+                linear-gradient(135deg, var(--navy-dark), var(--navy-light));
+        }
+
+        .partnership-card:nth-child(2) {
+            background:
+                linear-gradient(135deg, #1e6b26, #2f8f35);
+        }
+
+        .partnership-card:nth-child(3) {
+            background:
+                linear-gradient(135deg, #6d4d00, #ad7d00);
+        }
+
+        .partnership-card h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .partnership-card p {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.88rem;
+        }
+
+        /* FORM */
+
+        .form-section {
+            background:
+                linear-gradient(
+                    rgba(3, 30, 52, 0.94),
+                    rgba(3, 30, 52, 0.94)
+                ),
+                url("assets/images/village_market.jpg")
+                center / cover no-repeat;
+            color: var(--white);
+        }
+
+        .form-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        .form-copy .section-title {
+            color: var(--white);
+        }
+
+        .form-copy p {
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .sponsor-form {
+            background: var(--white);
+            border-radius: var(--radius-large);
+            padding: 35px;
+            color: var(--dark);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            border: 1px solid #dce2e6;
+            border-radius: 8px;
+            padding: 12px 13px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-note {
+            margin-top: 14px;
+            color: var(--gray);
+            font-size: 0.75rem;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            color: rgba(255, 255, 255, 0.8);
+            background: var(--navy-dark);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+
+        .footer .brand-text strong {
+            color: var(--white);
+        }
+
+        .footer-brand p {
+            max-width: 280px;
+            font-size: 0.82rem;
+            margin-top: 18px;
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 9px;
+        }
+
+        .footer-column a {
+            font-size: 0.8rem;
+        }
+
+        .footer-column a:hover {
+            color: #7ddd84;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 0.75rem;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1050px) {
+            .navigation {
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                width: min(380px, 88%);
+                height: calc(100vh - 76px);
+                background: var(--white);
+                padding: 35px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+                box-shadow: -15px 20px 35px rgba(0,0,0,0.13);
+                transition: right 0.35s ease;
+            }
+
+            .navigation.open {
+                right: 0;
+            }
+
+            .menu-button {
+                display: grid;
+            }
+
+            .support-grid,
+            .partnership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .intro-grid,
+            .form-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image img {
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .section {
+                padding: 68px 0;
+            }
+
+            .page-hero {
+                min-height: 540px;
+                background:
+                    linear-gradient(
+                        rgba(3, 30, 52, 0.84),
+                        rgba(3, 30, 52, 0.84)
+                    ),
+                    url("assets/images/village_life.jpg")
+                    center / cover no-repeat;
+            }
+
+            .page-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .support-grid,
+            .partnership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons,
+            .hero-buttons .button {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Become a Sponsor</h1>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container navbar">
 
-    <p>
-        Partner with HopeBridge Uganda Foundation and help us grow
-        programs in education, healthcare, child protection,
-        rural development and community empowerment.
-    </p>
+            <a href="index.html" class="brand">
+                <div class="brand-logo"></div>
+
+                <div class="brand-text">
+                    <strong>HopeBridge</strong>
+                    <span>Uganda Foundation</span>
+                </div>
+            </a>
+
+            <nav class="navigation" id="navigation">
+                <a href="about.html">About Us</a>
+                <a href="programs.html">Our Work</a>
+                <a href="volunteer.html">Get Involved</a>
+                <a href="sponsor.html" class="active">Sponsor Us</a>
+                <a href="blog.html">Stories & News</a>
+                <a href="reports.html">Resources</a>
+                <a href="donate.html" class="nav-donate">Donate</a>
+            </nav>
+
+            <div class="header-actions">
+                <button
+                    class="icon-button menu-button"
+                    id="menuButton"
+                    aria-label="Open navigation menu"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+
+                    <span class="page-hero-tag">
+                        Partner With Us
+                    </span>
+
+                    <h1>
+                        Help Build the Future With Us
+                    </h1>
+
+                    <p>
+                        HopeBridge Uganda Foundation welcomes individuals,
+                        companies, institutions and development partners who
+                        want to support practical, community-led solutions
+                        across Uganda.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#sponsor-form" class="button button-primary">
+                            Become a Sponsor
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+
+                        <a
+                            href="programs.html"
+                            class="button button-outline-light"
+                        >
+                            View Our Programs
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY SPONSOR -->
+        <section class="section">
+            <div class="container intro-grid">
+
+                <div class="intro-image">
+                    <img
+                        src="assets/images/rural_classroom.jpg"
+                        alt="Children learning in a rural classroom"
+                    >
+                </div>
+
+                <div class="intro-content">
+                    <span class="section-tag">Why Sponsor HopeBridge?</span>
+
+                    <h2 class="section-title">
+                        Become Part of Our Beginning
+                    </h2>
+
+                    <p>
+                        We are building HopeBridge Uganda Foundation from the
+                        ground up with a clear focus on education, healthcare,
+                        child welfare, livelihoods and rural development.
+                    </p>
+
+                    <p>
+                        Early sponsors have an opportunity to help shape
+                        meaningful programs and support communities at the
+                        stage where every contribution can make a significant
+                        difference.
+                    </p>
+
+                    <ul class="sponsor-list">
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Support community-led projects
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Help vulnerable children and families
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Strengthen education and healthcare access
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Help create sustainable livelihoods
+                        </li>
+
+                        <li>
+                            <i data-lucide="circle-check-big"></i>
+                            Build long-term community partnerships
+                        </li>
+                    </ul>
+
+                    <a href="#sponsor-form" class="button button-primary">
+                        Start a Partnership
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SUPPORT AREAS -->
+        <section class="section support-section">
+            <div class="container">
+
+                <header class="center-heading">
+                    <span class="section-tag">Areas You Can Support</span>
+
+                    <h2 class="section-title">
+                        Choose Where Your Support Matters Most
+                    </h2>
+
+                    <p class="section-description">
+                        Sponsorship can support one focus area or several,
+                        depending on your interests and partnership goals.
+                    </p>
+                </header>
+
+                <div class="support-grid">
+
+                    <article class="support-card">
+                        <div class="support-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>
+                            Learning materials, school support, digital
+                            literacy and opportunities for vulnerable learners.
+                        </p>
+                    </article>
+
+                    <article class="support-card">
+                        <div class="support-icon">
+                            <i data-lucide="briefcase-medical"></i>
+                        </div>
+                        <h3>Healthcare</h3>
+                        <p>
+                            Community health education, outreach, maternal and
+                            child health, sanitation and preventive care.
+                        </p>
+                    </article>
+
+                    <article class="support-card">
+                        <div class="support-icon">
+                            <i data-lucide="sprout"></i>
+                        </div>
+                        <h3>Rural Development</h3>
+                        <p>
+                            Agriculture, water access, community infrastructure
+                            and locally led development.
+                        </p>
+                    </article>
+
+                    <article class="support-card">
+                        <div class="support-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Child Protection</h3>
+                        <p>
+                            Safeguarding, family support and services for
+                            orphans and vulnerable children.
+                        </p>
+                    </article>
+
+                    <article class="support-card">
+                        <div class="support-icon">
+                            <i data-lucide="hand-coins"></i>
+                        </div>
+                        <h3>Livelihoods</h3>
+                        <p>
+                            Skills development, entrepreneurship, financial
+                            literacy and household income opportunities.
+                        </p>
+                    </article>
+
+                    <article class="support-card">
+                        <div class="support-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Community Empowerment</h3>
+                        <p>
+                            Leadership, volunteering, youth participation and
+                            community-driven action.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERSHIP TYPES -->
+        <section class="section">
+            <div class="container">
+
+                <header class="center-heading">
+                    <span class="section-tag">Ways to Partner</span>
+
+                    <h2 class="section-title">
+                        Sponsorship That Fits Your Goals
+                    </h2>
+                </header>
+
+                <div class="partnership-grid">
+
+                    <article class="partnership-card">
+                        <h3>Individual Sponsorship</h3>
+
+                        <p>
+                            Individuals can support specific initiatives,
+                            contribute resources or help fund community
+                            activities.
+                        </p>
+                    </article>
+
+                    <article class="partnership-card">
+                        <h3>Corporate Partnership</h3>
+
+                        <p>
+                            Businesses can support programs through corporate
+                            social responsibility, staff volunteering,
+                            equipment or funding.
+                        </p>
+                    </article>
+
+                    <article class="partnership-card">
+                        <h3>Institutional Partnership</h3>
+
+                        <p>
+                            NGOs, foundations and development organizations can
+                            collaborate on projects, training, technical
+                            assistance and community programs.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SPONSOR FORM -->
+        <section class="section form-section" id="sponsor-form">
+            <div class="container form-layout">
+
+                <div class="form-copy">
+                    <span class="section-tag">
+                        Start a Conversation
+                    </span>
+
+                    <h2 class="section-title">
+                        Interested in Supporting HopeBridge?
+                    </h2>
+
+                    <p>
+                        Tell us a little about yourself or your organization
+                        and the area you would like to support. We can then
+                        discuss possible partnership opportunities.
+                    </p>
+                </div>
+
+                <form class="sponsor-form" id="sponsorForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                required
+                                placeholder="Your full name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                required
+                                placeholder="you@example.com"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">
+                                Organization / Company
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organization"
+                                placeholder="Optional"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+
+                            <input
+                                type="text"
+                                id="country"
+                                placeholder="Your country"
+                            >
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="interest">
+                                Area You Would Like to Support
+                            </label>
+
+                            <select id="interest">
+                                <option>Education</option>
+                                <option>Healthcare</option>
+                                <option>Rural Development</option>
+                                <option>Child Protection</option>
+                                <option>Livelihoods</option>
+                                <option>Community Empowerment</option>
+                                <option>General Partnership</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="message">
+                                Tell Us About Your Partnership Interest
+                            </label>
+
+                            <textarea
+                                id="message"
+                                placeholder="How would you like to support or partner with HopeBridge?"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <button
+                                type="submit"
+                                class="button button-primary"
+                            >
+                                Send Sponsorship Interest
+                                <i data-lucide="send"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <p class="form-note">
+                        This form is currently a website demonstration and does
+                        not send information to a server yet.
+                    </p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <div class="brand-logo"></div>
+
+                        <div class="brand-text">
+                            <strong>HopeBridge</strong>
+                            <span>Uganda Foundation</span>
+                        </div>
+                    </a>
+
+                    <p>
+                        Building hope, transforming lives and empowering
+                        communities across Uganda.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Work</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="sponsor.html">Sponsor Us</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Stories & News</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="currentYear"></span>
+                    HopeBridge Uganda Foundation.
+                </p>
+
+                <p>
+                    Community-led development across Uganda.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuButton = document.getElementById("menuButton");
+        const navigation = document.getElementById("navigation");
+
+        menuButton.addEventListener("click", () => {
+            const open = navigation.classList.toggle("open");
+
+            menuButton.innerHTML = open
+                ? '<i data-lucide="x"></i>'
+                : '<i data-lucide="menu"></i>';
+
+            lucide.createIcons();
+        });
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+        const sponsorForm = document.getElementById("sponsorForm");
+
+        sponsorForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            alert(
+                "Thank you for your interest in partnering with HopeBridge Uganda Foundation."
+            );
+
+            sponsorForm.reset();
+        });
+    </script>
 
 </body>
 </html>
