@@ -339,23 +339,24 @@
            HERO
         ========================== */
 
-        .hero {
-            position: relative;
-            min-height: 660px;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(10, 31, 15, 0.92) 0%,
-                    rgba(10, 31, 15, 0.76) 42%,
-                    rgba(10, 31, 15, 0.18) 72%,
-                    rgba(10, 31, 15, 0.08) 100%
-                ),
-                url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1900&q=85")
-                center 38% / cover no-repeat;
-        }
+.hero {
+    position: relative;
+    min-height: 660px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 35, 17, 0.94) 0%,
+            rgba(6, 35, 17, 0.79) 42%,
+            rgba(6, 35, 17, 0.25) 74%,
+            rgba(6, 35, 17, 0.10) 100%
+        ),
+        url("assets/images/village_life.jpg")
+        center / cover no-repeat;
+}
 
         .hero-content {
             position: relative;
@@ -557,8 +558,8 @@
                     rgba(4, 28, 23, 0.77) 43%,
                     rgba(4, 28, 23, 0.12) 75%
                 ),
-                url("https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1900&q=85")
-                center / cover no-repeat;
+              url("assets/images/smallholder_farming.jpg")
+              center / cover no-repeat;
         }
 
         .community-content {
@@ -1235,44 +1236,85 @@
             </div>
         </section>
 
-        <!-- IMPACT STATISTICS -->
-    <section class="impact-strip">
+      <!-- IMPACT STATISTICS -->
+<section class="impact-strip">
     <div class="container impact-grid">
 
         <article class="impact-item">
             <i data-lucide="map-pinned"></i>
-            <strong class="impact-number">Growing</strong>
+            <strong class="impact-number">3</strong>
             <span class="impact-label">
-                Reaching More Communities
+                Communities Reached
             </span>
         </article>
 
         <article class="impact-item">
             <i data-lucide="heart-handshake"></i>
-            <strong class="impact-number">Together</strong>
+            <strong class="impact-number">12</strong>
             <span class="impact-label">
-                Creating Meaningful Impact
+                Lives Impacted
             </span>
         </article>
 
         <article class="impact-item">
             <i data-lucide="badge-check"></i>
-            <strong class="impact-number">Building</strong>
+            <strong class="impact-number">2</strong>
             <span class="impact-label">
-                Community Projects
+                Projects Started
             </span>
         </article>
 
         <article class="impact-item">
             <i data-lucide="users"></i>
-            <strong class="impact-number">Join Us</strong>
+            <strong class="impact-number">0</strong>
             <span class="impact-label">
-                Partners & Volunteers Welcome
+                Sponsors & Partners
             </span>
         </article>
 
     </div>
 </section>
+
+       <!-- SPONSOR INVITATION -->
+<section style="
+    background: #f5f8f6;
+    padding: 35px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e4ebe5;
+">
+    <div class="container">
+
+        <h2 style="
+            font-family: 'Poppins', sans-serif;
+            color: #062d4d;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        ">
+            Be Part of Our Beginning
+        </h2>
+
+        <p style="
+            color: #68737d;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        ">
+            We are building a community-driven organization dedicated
+            to creating opportunities for vulnerable children, families
+            and rural communities in Uganda. Your partnership can help
+            turn our vision into lasting change.
+        </p>
+
+        <a
+            href="contact.html"
+            class="button button-primary"
+        >
+            <i data-lucide="handshake"></i>
+            Become a Sponsor
+        </a>
+
+    </div>
+</section>
+        
         <!-- PROGRAMS -->
         <section class="section programs-section">
             <div class="container">
